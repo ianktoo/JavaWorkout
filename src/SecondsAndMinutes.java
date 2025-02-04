@@ -1,9 +1,10 @@
 public class SecondsAndMinutes {
 
     public static void main(String[] args) {
-        printYearsAndDays(525600);
-        printYearsAndDays(1051200);
-        printYearsAndDays(561600);
+        System.out.println(isCatPlaying(true, 10));
+        System.out.println(isCatPlaying(false, 36));
+        System.out.println(isCatPlaying(false, 35));
+
     }
 
     /*
@@ -62,6 +63,16 @@ public class SecondsAndMinutes {
 
             System.out.println(minutes + " min = " + years + " y and " + remainingDays + " d");
 
+        }
+    }
+
+    public static boolean isCatPlaying(boolean summer, int temperature){
+        if(!summer && (temperature >= 25 && temperature <= 35)){
+            return true;
+        } else if(summer && (temperature >= 25 && temperature <= 45)){
+            return true;
+        } else {
+            return false;
         }
     }
 }
